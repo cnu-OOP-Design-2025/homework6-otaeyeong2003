@@ -6,16 +6,19 @@ class Duck : public Bird {
 public:
     Duck() : Bird("Duck") {
         cry();}
-
-    void cry() override {
-        cout <<"Quack!"<< endl;}
     ~Duck() override {
         cry();}
+        
+    void cry() override {
+        cout <<"Quack!"<< endl;}
+    
 };
 
 class Penguin : public Bird {
 public:
     Penguin() : Bird("Penguin") {
+        cry();}   
+    ~Penguin() override {
         cry();}
 
     void cry() override {
@@ -24,21 +27,21 @@ public:
     void fly() override {
         cout << "This bird can't fly." << endl;}
 
-    ~Penguin() override {
-        cry();}
+
 };
 
 class Eagle : public Bird {
 public:
     Eagle() : Bird("Eagle") {
         cry();}
-
+    ~Eagle() override {
+        cry();
+}
     void cry() override {
         cout << "Screech!" << endl;}
 
     void swim() override {
         cout << "This bird can't swim." << endl;}
 
-    ~Eagle() override {
-        cry();}
+
 };
